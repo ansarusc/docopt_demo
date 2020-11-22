@@ -1,6 +1,7 @@
 # author: Tiffany Timbers (still, I just modify)
 # date: 2020-11-22
 
+
 """This script prints out docopt args.
 Usage: docopt.py <arg> --arg2=<arg2> [--arg3=<arg3>] [--arg4=<arg4>]
 
@@ -13,6 +14,13 @@ Options:
 
 from docopt import docopt
 opt = docopt(__doc__)
-print(opt$arg4)
-print(opt)
-print(type(opt))
+
+def main(arg, arg2, arg3=NULL, arg4=NULL):
+  arg_list = [arg, arg2, arg3, arg4]
+  print(arg4)
+  for i in arg_list:
+    print(i)
+    print(type(i))
+  
+if __name__ == "__main__":
+  main(opt["arg"], opt["--arg2"], opt["--arg3"], opt["--arg4"])
